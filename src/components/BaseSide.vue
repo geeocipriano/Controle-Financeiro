@@ -6,8 +6,8 @@
 
 </template>
 <script>
-    import SideUserCard from '../components/SideUserCard'
-    import SideDashCard from '../components/SideDashCard'
+    import SideUserCard from '../components/side/SideUserCard'
+    import SideDashCard from '../components/side/SideDashCard'
     export default {
         name: 'BaseSide',
         components: {
