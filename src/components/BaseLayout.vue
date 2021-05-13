@@ -22,7 +22,7 @@
       <v-card
       width="50vw"
       >
-        <DTProdutos />
+        <h1>Teste</h1>
       </v-card>
     </v-main>
   </v-app>
@@ -30,13 +30,11 @@
 
 <script>
     import BaseSide from '../components/BaseSide'
-    import DTProdutos from '../components/middle/DTProdutos'
 
     export default {
         name : 'Baselayout',
         components: {
             BaseSide,
-            DTProdutos
         },
 
     data: () => ({ 
