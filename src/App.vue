@@ -1,8 +1,10 @@
 <template>
   <v-app id="inspire">
-    <v-navigation-drawer
+      <v-navigation-drawer
       v-model="drawer"
       app
+      color="primary"
+      dark
     >
       <v-list-item>
         <v-list-item-content>
@@ -22,6 +24,7 @@
         <v-list-item
           v-for="item in items"
           :key="item.title"
+          :to="item.to"
           link
         >
           <v-list-item-icon>
@@ -34,13 +37,13 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar app>
+    <v-app-bar app color="primary" dark>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title>Application</v-toolbar-title>
     </v-app-bar>
 
     <v-main>
-      <!--  -->
+      <router-view></router-view>
     </v-main>
   </v-app>
 </template>
@@ -50,8 +53,9 @@
     data: () => ({ 
       drawer: null,
       items: [
-          { title: 'Produtos', icon: 'mdi-view-dashboard' },
-          { title: 'Financeiro', icon: 'mdi-help-box' },
+          { title: 'Home', icon: 'mdi-home', to: '/' },
+          { title: 'Produtos', icon: 'mdi-basket', to: '/Produtos' },
+          { title: 'Financeiro', icon: 'mdi-cash', to: '/Financeiro' },
         ],
         right: null,
     }),
