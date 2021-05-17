@@ -10,13 +10,14 @@
           v-for="card in cards"
           :key="card.title"
           :cols="card.flex"
+          cols-md=12
         >
           <v-card
           :color="card.color"
           class="px-6"
           >
               <v-card-title v-text="card.title" dark class="mb-4 d-flex justify-center"></v-card-title>
-              <v-card-subtitle dark class="d-flex justify-center font-weight-bold">
+              <v-card-subtitle dark class="d-flex justify-center font-weight-bold mb-4">
                 <h1 v-text="card.num"></h1>
               </v-card-subtitle>
           </v-card>
