@@ -10,7 +10,6 @@
           v-for="card in cards"
           :key="card.title"
           :cols="card.flex"
-          cols-md=12
         >
           <v-card
           :color="card.color"
