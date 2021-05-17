@@ -26,7 +26,7 @@
         >
           <v-card
           color="red"
-          dark>
+          >
             <v-card-title class="d-flex justify-center">Estoque Grupo</v-card-title>
             <v-list two-line>
               <v-list-item-group
@@ -60,7 +60,7 @@
         >
           <v-card
           color="purple"
-          dark>
+          >
             <v-card-title class="d-flex justify-center">Estoque Grupo</v-card-title>
             <v-list two-line>
               <v-list-item-group
