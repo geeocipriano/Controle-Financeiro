@@ -21,6 +21,74 @@
               </v-card-subtitle>
           </v-card>
         </v-col>
+        <v-col
+        cols="6"
+        >
+          <v-card
+          color="red"
+          dark>
+            <v-card-title class="d-flex justify-center">Estoque Grupo</v-card-title>
+            <v-list two-line>
+              <v-list-item-group
+              >
+                <template v-for="(item, index) in items">
+                  <v-list-item :key="item.title">
+                    <template >
+                      <v-list-item-content>
+                        <v-list-item-title v-text="item.title"></v-list-item-title>
+
+                        <v-list-item-subtitle
+                          class="text--primary"
+                        ></v-list-item-subtitle>
+
+                        <v-list-item-subtitle v-text="item.subtitle"></v-list-item-subtitle>
+                      </v-list-item-content>
+                    </template>
+                  </v-list-item>
+
+                  <v-divider
+                    v-if="index < items.length - 1"
+                    :key="index"
+                  ></v-divider>
+                </template>
+              </v-list-item-group>
+            </v-list>
+          </v-card>
+        </v-col>
+        <v-col
+        cols="6"
+        >
+          <v-card
+          color="purple"
+          dark>
+            <v-card-title class="d-flex justify-center">Estoque Grupo</v-card-title>
+            <v-list two-line>
+              <v-list-item-group
+              >
+                <template v-for="(item, index) in items">
+                  <v-list-item :key="item.title">
+                    <template >
+                      <v-list-item-content>
+                        <v-list-item-title v-text="item.title"></v-list-item-title>
+
+                        <v-list-item-subtitle
+                          class="text--primary"
+                        ></v-list-item-subtitle>
+
+                        <v-list-item-subtitle v-text="item.subtitle"></v-list-item-subtitle>
+                      </v-list-item-content>
+                    </template>
+                  </v-list-item>
+
+                  <v-divider
+                    v-if="index < items.length - 1"
+                    :key="index"
+                  ></v-divider>
+                </template>
+              </v-list-item-group>
+            </v-list>
+          </v-card>
+        </v-col>
       </v-row>
     </v-container>
   </v-card>
@@ -32,9 +100,28 @@
         { title: 'Novas Vendas', flex: 4, color:'#beee62', num: 1250},      
         { title: 'Aguardando Confirmação', flex: 4, color:'#ffd23f', num: 500},
         { title: 'Vendas Concluidas', flex: 4, color:'#119da4', num: 2150 },
-        { title: 'Listagem de Produtos', flex: 6 },
-        { title: 'Controle de Caixa', flex: 6 },
-        { title: 'Ficha de movimentação', flex: 6 },
+      ],
+      items: [
+        {
+          subtitle: 'Esportiva',
+          title: 'Camisa',
+        },
+        {
+          subtitle: 'Corrida',
+          title: 'Tenis',
+        },
+        {
+          subtitle: 'Inverno',
+          title: 'Jaqueta',
+        },
+        {
+          subtitle: 'Verão',
+          title: 'Sandalia',
+        },
+        {
+          subtitle: 'Jeans',
+          title: 'Calça',
+        },
       ],
     }),
   }
