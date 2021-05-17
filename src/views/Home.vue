@@ -11,31 +11,14 @@
           :key="card.title"
           :cols="card.flex"
         >
-          <v-card>
-            <v-img
-              :src="card.src"
-              class="white--text align-end"
-              gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-              height="200px"
-            >
-              <v-card-title v-text="card.title"></v-card-title>
-            </v-img>
-
-            <v-card-actions>
-              <v-spacer></v-spacer>
-
-              <v-btn icon>
-                <v-icon>mdi-heart</v-icon>
-              </v-btn>
-
-              <v-btn icon>
-                <v-icon>mdi-bookmark</v-icon>
-              </v-btn>
-
-              <v-btn icon>
-                <v-icon>mdi-share-variant</v-icon>
-              </v-btn>
-            </v-card-actions>
+          <v-card
+          :color="card.color"
+          class="px-6"
+          >
+              <v-card-title v-text="card.title" dark class="mb-4 d-flex justify-center"></v-card-title>
+              <v-card-subtitle dark class="d-flex justify-center font-weight-bold">
+                <h1 v-text="card.num"></h1>
+              </v-card-subtitle>
           </v-card>
         </v-col>
       </v-row>
@@ -46,12 +29,12 @@
   export default {
     data: () => ({
       cards: [
-        { title: 'Cadastro de Usuarios', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 6 },      
-        { title: 'Permissoes de Usuarios', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 6 },
-        { title: 'Cadastro de Produtos', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', flex: 6 },
-        { title: 'Listagem de Produtos', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', flex: 6 },
-        { title: 'Controle de Caixa', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', flex: 6 },
-        { title: 'Ficha de movimentação', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', flex: 6 },
+        { title: 'Novas Vendas', flex: 4, color:'#beee62', num: 1250},      
+        { title: 'Aguardando Confirmação', flex: 4, color:'#ffd23f', num: 500},
+        { title: 'Vendas Concluidas', flex: 4, color:'#119da4', num: 2150 },
+        { title: 'Listagem de Produtos', flex: 6 },
+        { title: 'Controle de Caixa', flex: 6 },
+        { title: 'Ficha de movimentação', flex: 6 },
       ],
     }),
   }

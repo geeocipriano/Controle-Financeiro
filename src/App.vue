@@ -3,7 +3,7 @@
       <v-navigation-drawer
       v-model="drawer"
       app
-      color="grey darken-1"
+      color="#323031"
       dark
     >
       <v-list-item>
@@ -37,9 +37,9 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar app color="deep-orange darken-4" dark>
+    <v-app-bar app color="#323031" dark >
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>Application</v-toolbar-title>
+      <v-toolbar-title>CONTROLE GERENCIAL</v-toolbar-title>
     </v-app-bar>
 
     <v-main>
