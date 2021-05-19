@@ -37,13 +37,12 @@
                     <template >
                       <v-list-item-content>
                         <v-list-item-title v-text="grupo.title"></v-list-item-title>
-
-                        <v-list-item-subtitle
-                          class="text--primary"
-                        ></v-list-item-subtitle>
-
-                        <v-list-item-subtitle v-text="grupo.subtitle"></v-list-item-subtitle>
                       </v-list-item-content>
+                      <v-list-content>
+                        <v-chip color="red" label>
+                          <v-list-item-title v-text="grupo.estoque"></v-list-item-title>
+                        </v-chip>
+                      </v-list-content>
                     </template>
                   </v-list-item>
                   <v-divider
@@ -65,8 +64,7 @@
           >
             <v-card-title class="d-flex justify-center">Estoque Marcas</v-card-title>
             <v-list two-line>
-              <v-list-item-group
-              >
+              <v-list-item-group>
                 <template v-for="(marca, index) in marcas">
                   <v-list-item :key="marca.title">
                     <template>
@@ -74,13 +72,12 @@
                         <v-list-item-title v-text="marca.title"></v-list-item-title>
                       </v-list-item-content>
                       <v-list-content>
-                        <v-chip color="purple">
-                          <v-list-item-title v-text="marca.subtitle"></v-list-item-title>
+                        <v-chip color="purple" label>
+                          <v-list-item-title v-text="marca.estoque"></v-list-item-title>
                         </v-chip>
                       </v-list-content>
                     </template>
                   </v-list-item>
-
                   <v-divider
                     v-if="index < marca.length - 1"
                     :key="index"
@@ -105,45 +102,45 @@
       ],
       grupos: [
         {
-          subtitle: 'Esportiva',
+          estoque: '5',
           title: 'Camisa',
         },
         {
-          subtitle: 'Corrida',
+          estoque: '15',
           title: 'Tenis',
         },
         {
-          subtitle: 'Inverno',
+          estoque: '10',
           title: 'Jaqueta',
         },
         {
-          subtitle: 'Verão',
+          estoque: '20',
           title: 'Sandalia',
         },
         {
-          subtitle: 'Jeans',
+          estoque: '25',
           title: 'Calça',
         },
       ],
       marcas: [
         {
-          subtitle: 'Esportiva',
+          estoque: 13,
           title: 'Camisa',
         },
         {
-          subtitle: 'Corrida',
+          estoque: 11,
           title: 'Tenis',
         },
         {
-          subtitle: 'Inverno',
+          estoque: 15,
           title: 'Jaqueta',
         },
         {
-          subtitle: 'Verão',
+          estoque: 20,
           title: 'Sandalia',
         },
         {
-          subtitle: 'Jeans',
+          estoque: 25,
           title: 'Calça',
         },
       ],
