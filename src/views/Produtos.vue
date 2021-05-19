@@ -1,20 +1,27 @@
 <template>
-  <v-card>
-    <v-card-title>
-      <v-text-field
-        v-model="search"
-        append-icon="mdi-magnify"
-        label="Search"
-        single-line
-        hide-details
-      ></v-text-field>
-    </v-card-title>
-    <v-data-table
-      :headers="headers"
-      :items="desserts"
-      :search="search"
-    ></v-data-table>
-  </v-card>
+  <v-app>
+    <v-col cols="6">
+      
+    </v-col>
+    <v-col cols="6">
+      <v-card>
+        <v-card-title>
+          <v-text-field
+            v-model="search"
+            append-icon="mdi-magnify"
+            label="Search"
+            single-line
+            hide-details
+          ></v-text-field>
+        </v-card-title>
+        <v-data-table
+          :headers="headers"
+          :items="desserts"
+          :search="search"
+        ></v-data-table>
+      </v-card>
+    </v-col>
+  </v-app>
 </template>
 <script>
   export default {
@@ -23,16 +30,16 @@
         search: '',
         headers: [
           {
-            text: 'Dessert (100g serving)',
+            text: 'Produto',
             align: 'start',
             filterable: false,
             value: 'name',
           },
-          { text: 'Calories', value: 'calories' },
-          { text: 'Fat (g)', value: 'fat' },
-          { text: 'Carbs (g)', value: 'carbs' },
-          { text: 'Protein (g)', value: 'protein' },
-          { text: 'Iron (%)', value: 'iron' },
+          { text: 'Grupo', value: 'calories' },
+          { text: 'Marca', value: 'fat' },
+          { text: 'Estoque', value: 'carbs' },
+          { text: 'Valor Venda', value: 'protein' },
+          { text: 'Lucro (%)', value: 'iron' },
         ],
         desserts: [
           {
