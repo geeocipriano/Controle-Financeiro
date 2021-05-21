@@ -1,5 +1,5 @@
 <template>
-  <v-card color="#26c6da" class="ma-2">
+  <v-card color="#26c6da" class="ma-2 pa-2">
     <v-card-title>
       <v-text-field
         v-model="search"
@@ -14,7 +14,7 @@
       :headers="headers"
       :items="desserts"
       :search="search"
-      height="63vh"
+      height="60vh"
     ></v-data-table>
   </v-card>
 </template>
