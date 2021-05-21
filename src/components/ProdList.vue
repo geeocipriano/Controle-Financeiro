@@ -1,5 +1,5 @@
 <template>
-  <v-card color="#26c6da" class="ma-2 pa-2">
+  <v-card class="ma-2 pa-2">
     <v-card-title>
       <v-text-field
         v-model="search"
@@ -7,7 +7,6 @@
         label="Search"
         single-line
         hide-details
-        dark
       ></v-text-field>
     </v-card-title>
     <v-data-table
