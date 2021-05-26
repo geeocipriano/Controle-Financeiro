@@ -1,11 +1,11 @@
 <template>
-  <ProdAdicionar />
+  <prodAdd />
 </template>
 <script>
-import ProdAdicionar from '../components/ProdAdicionar'
+import prodAdd from "../components/product/prodAdd";
 export default {
   components: {
-    ProdAdicionar
-  }
-}
+    prodAdd,
+  },
+};
 </script>

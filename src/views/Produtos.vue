@@ -2,21 +2,21 @@
   <v-app>
     <v-row>
       <v-col cols="6">
-        <ProdAdicionar />
+        <prodAdd />
       </v-col>
       <v-col cols="6">
-        <ProdList />
+        <prodList />
       </v-col>
     </v-row>
   </v-app>
 </template>
 <script>
-  import ProdAdicionar from '../components/ProdAdicionar'
-  import ProdList from '../components/ProdList'
-  export default {
-    components: {
-      ProdAdicionar,
-      ProdList
-    }
-  }
+import prodAdd from "../components/product/prodAdd";
+import prodList from "../components/product/prodList";
+export default {
+  components: {
+    prodAdd,
+    prodList,
+  },
+};
 </script>
