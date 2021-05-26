@@ -15,7 +15,7 @@
                 <v-text-field label="Valor Venda" class="mr-5"></v-text-field>
                 <v-text-field label="Valor de Custo"></v-text-field>
             </v-row>
-            <v-row class="d-flex mx-5 justify-space-between align-center">
+            <v-row class="d-flex mx-5 justify-space-between align-center mt-15">
                 <v-btn width="30%">Salvar</v-btn>
                 <v-btn width="30%">Limpar</v-btn>
                 <v-btn width="30%">Excluir</v-btn>
