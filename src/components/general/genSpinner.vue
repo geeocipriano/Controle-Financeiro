@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center spinner">
+  <div class="text-center spinner" v-if="visible">
     <v-progress-circular
       indeterminate
       color="#e76f51"
@@ -9,7 +9,23 @@
   </div>
 </template>
 <script>
-export default { name: "genSpinner" };
+export default {
+  name: "genSpinner",
+  data() {
+    return {
+      visible: false,
+    };
+  },
+  created() {
+    this.$root.$on("Spinner::show", this.showSpinner);
+    this.$root.$on("Spinner::hide", this.showSpinner);
+  },
+  methods: {
+      showSpinner(){
+          this.visible = !this.visible
+      }
+  }
+};
 </script>
 
 <style scoped>
