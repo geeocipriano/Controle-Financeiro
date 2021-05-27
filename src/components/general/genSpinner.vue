@@ -21,10 +21,10 @@ export default {
     this.$root.$on("Spinner::hide", this.showSpinner);
   },
   methods: {
-      showSpinner(){
-          this.visible = !this.visible
-      }
-  }
+    showSpinner() {
+      this.visible = !this.visible;
+    },
+  },
 };
 </script>
 
