@@ -29,9 +29,6 @@ export default {
     ],
     right: null,
   }),
-  mounted() {
-    console.log(this.$firebase);
-  },
 };
 </script>
 <style scoped>
