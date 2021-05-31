@@ -1,7 +1,5 @@
 <template>
   <v-app id="inspire">
-    <side-bar />
-    <nav-bar @click="drawer = false" />
     <v-main>
       <gen-spinner />
       <router-view></router-view>
@@ -10,11 +8,9 @@
 </template>
 
 <script>
-import NavBar from "./components/bars/navBar.vue";
-import SideBar from "./components/bars/sideBar.vue";
 import genSpinner from "./components/general/genSpinner.vue";
 export default {
-  components: { genSpinner, SideBar, NavBar },
+  components: { genSpinner },
   data: () => ({
     items: [
       { title: "Home", icon: "mdi-home", to: "/", color: "#e76f51" },
@@ -39,7 +35,9 @@ export default {
 };
 </script>
 <style scoped>
-.light-red {
-  color: #e76f51;
+#inspire {
+  min-height: 100vh;
+  background-color: black;
+  color: aliceblue;
 }
 </style>
