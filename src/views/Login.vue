@@ -1,5 +1,5 @@
 <template>
-  <v-container fill-height fluid>
+  <v-container fill-height fluid id="app">
     <v-row align="center" justify="center">
       <v-card class="mx-auto" min-width="344">
         <v-card-text>
@@ -49,4 +49,7 @@ export default {
 </script>
 
 <style>
+#app {
+  background-color: black;
+}
 </style>
