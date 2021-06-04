@@ -10,8 +10,8 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'Login',
+    component: Login
   },
   {
     path: '/Financeiro',
@@ -24,9 +24,9 @@ const routes = [
     component: Produtos
   },
   {
-    path: '/Login',
-    name: 'Login',
-    component: Login
+    path: '/Home',
+    name: 'Home',
+    component: Home
   },
 ]
 

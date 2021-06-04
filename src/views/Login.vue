@@ -14,7 +14,8 @@
           ></v-text-field>
         </v-card-text>
         <v-card-actions>
-          <v-btn block elevation="2" color="primary" @submit.prevent="doLogin()"
+          <v-btn block elevation="2" color="primary" @click.prevent="doLogin()"
+          
             >Login</v-btn
           >
         </v-card-actions>
@@ -27,18 +28,18 @@
 export default {
   data: () => {
     return {
-      email: "teste",
-      password: "",
+      email: 'teste@teste.com',
+      password: '123456',
     };
   },
   methods: {
     async doLogin() {
-      const { email, password } = this;
       try {
         const res = await this.$firebase
           .auth()
-          .signInWithEmailAndPassword(email, password);
-        console.log(res);
+          .signInWithEmailAndPassword(this.email, this.password);
+        window.uid = res.user.uid  
+        this.$router.push({ name: 'Home' })
       } catch (error) {
         console.log(error);
       }
