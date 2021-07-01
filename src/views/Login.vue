@@ -14,10 +14,25 @@
           ></v-text-field>
         </v-card-text>
         <v-card-actions>
-          <v-btn block elevation="2" color="primary" @click.prevent="doLogin()"
-          
-            >Login</v-btn
+          <v-btn
+            block
+            elevation="2"
+            color="primary"
+            @click.prevent="doLogin()"
+            :disabled="loading"
           >
+            <template v-if="loading">
+              <div class="pr-5">Entrando</div>
+              <v-progress-circular
+                indeterminate
+                color="primary"
+              ></v-progress-circular>
+            </template>
+            <template v-else>
+              <div>Login</div>
+              <v-icon class="pl-5">mdi-login-variant</v-icon>
+            </template>
+          </v-btn>
         </v-card-actions>
       </v-card>
     </v-row>
@@ -28,21 +43,24 @@
 export default {
   data: () => {
     return {
-      email: 'teste@teste.com',
-      password: '123456',
+      loading: false,
+      email: "teste@teste.com",
+      password: "123456",
     };
   },
   methods: {
     async doLogin() {
+      this.loading = true;
       try {
         const res = await this.$firebase
           .auth()
           .signInWithEmailAndPassword(this.email, this.password);
-        window.uid = res.user.uid  
-        this.$router.push({ name: 'Home' })
+        window.uid = res.user.uid;
+        this.$router.push({ name: "Home" });
       } catch (error) {
         console.log(error);
       }
+      this.loading = false;
     },
   },
 };

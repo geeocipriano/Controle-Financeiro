@@ -12,7 +12,13 @@ import genSpinner from "./components/general/genSpinner.vue";
 export default {
   components: { genSpinner },
   mounted() {
-    console.log(this.$firebase);
+    this.$firebase.auth().onAuthStateChanged((user) => {
+      window.uid = user ? user.uid : null;
+      this.$router.push({
+        name: window.uid ? "Home" : "Login",
+      });
+      this.$root.$emit('Spinner::hide')
+    });
   },
 };
 </script>

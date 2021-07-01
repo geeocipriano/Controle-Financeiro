@@ -13,17 +13,16 @@ export default {
   name: "genSpinner",
   data() {
     return {
-      visible: false,
+      visible: true,
     };
   },
   created() {
-    this.$root.$on("Spinner::show", this.showSpinner);
-    this.$root.$on("Spinner::hide", this.showSpinner);
-  },
-  methods: {
-    showSpinner() {
-      this.visible = !this.visible;
-    },
+    this.$root.$on("Spinner::show", () => {
+      this.visible = true;
+    });
+    this.$root.$on("Spinner::hide", () => {
+      this.visible = false;
+    });
   },
 };
 </script>
